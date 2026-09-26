@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LensCraft - Discover Visuals</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Sticky Branded Header -->
+  <header class="app-header">
+    <div class="logo-area">
+      <h1>LensCraft</h1>
+      <p class="tagline">Explore high-quality visual stories in seconds.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Search Form Control -->
+    <form id="search-form" class="search-section">
+      <label for="search-input" class="sr-only">Search images</label>
+      <div class="input-wrapper">
+        <input 
+          type="search" 
+          id="search-input" 
+          placeholder="Type a topic (e.g., Cyberpunk, Wildlife, Ocean)..." 
+          required 
+        />
+        <button type="submit" id="search-button">Search</button>
+      </div>
+    </form>
+
+    <!-- Original Feature 1: Category / Quick-Pick Suggestion Chips -->
+    <div class="chip-container" aria-label="Suggested Categories">
+      <span class="chip-label">Popular:</span>
+      <button type="button" class="chip">Nature</button>
+      <button type="button" class="chip">Architecture</button>
+      <button type="button" class="chip">Minimalism</button>
+      <button type="button" class="chip">Space</button>
+    </div>
+
+    <!-- Original Feature 2: Empty State Message -->
+    <div id="empty-state" class="empty-state">
+      <p>Search for a keyword above to reveal the image grid.</p>
+    </div>
+
+    <!-- Empty Results Container (Target for Part 2) -->
+    <section id="results-grid" class="results-grid" aria-live="polite">
+      <!-- No hardcoded img tags here. JavaScript will populate this in Part 2. -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
